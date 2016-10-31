@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.minimuBetLabel = new System.Windows.Forms.Label();
-            this.joRadioButton = new System.Windows.Forms.RadioButton();
+            this.joeRadioButton = new System.Windows.Forms.RadioButton();
             this.bobRadioButton = new System.Windows.Forms.RadioButton();
             this.alRadioButton = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             this.alBetLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.racetrackPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -48,9 +49,10 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racetrackPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -72,7 +74,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.alRadioButton);
             this.groupBox1.Controls.Add(this.bobRadioButton);
-            this.groupBox1.Controls.Add(this.joRadioButton);
+            this.groupBox1.Controls.Add(this.joeRadioButton);
             this.groupBox1.Controls.Add(this.minimuBetLabel);
             this.groupBox1.Location = new System.Drawing.Point(12, 231);
             this.groupBox1.Name = "groupBox1";
@@ -91,16 +93,16 @@
             this.minimuBetLabel.TabIndex = 0;
             this.minimuBetLabel.Text = "label1";
             // 
-            // joRadioButton
+            // joeRadioButton
             // 
-            this.joRadioButton.AutoSize = true;
-            this.joRadioButton.Location = new System.Drawing.Point(10, 37);
-            this.joRadioButton.Name = "joRadioButton";
-            this.joRadioButton.Size = new System.Drawing.Size(85, 17);
-            this.joRadioButton.TabIndex = 1;
-            this.joRadioButton.TabStop = true;
-            this.joRadioButton.Text = "radioButton1";
-            this.joRadioButton.UseVisualStyleBackColor = true;
+            this.joeRadioButton.AutoSize = true;
+            this.joeRadioButton.Location = new System.Drawing.Point(10, 37);
+            this.joeRadioButton.Name = "joeRadioButton";
+            this.joeRadioButton.Size = new System.Drawing.Size(85, 17);
+            this.joeRadioButton.TabIndex = 1;
+            this.joeRadioButton.TabStop = true;
+            this.joeRadioButton.Text = "radioButton1";
+            this.joeRadioButton.UseVisualStyleBackColor = true;
             // 
             // bobRadioButton
             // 
@@ -136,6 +138,7 @@
             // 
             // joeBetLabel
             // 
+            this.joeBetLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.joeBetLabel.Location = new System.Drawing.Point(255, 37);
             this.joeBetLabel.Name = "joeBetLabel";
             this.joeBetLabel.Size = new System.Drawing.Size(200, 17);
@@ -144,6 +147,7 @@
             // 
             // bobBetLabel
             // 
+            this.bobBetLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bobBetLabel.Location = new System.Drawing.Point(255, 60);
             this.bobBetLabel.Name = "bobBetLabel";
             this.bobBetLabel.Size = new System.Drawing.Size(200, 17);
@@ -152,6 +156,7 @@
             // 
             // alBetLabel
             // 
+            this.alBetLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.alBetLabel.Location = new System.Drawing.Point(255, 83);
             this.alBetLabel.Name = "alBetLabel";
             this.alBetLabel.Size = new System.Drawing.Size(200, 17);
@@ -176,14 +181,14 @@
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // racetrackPictureBox
             // 
-            this.pictureBox1.Image = global::RaceSim.Properties.Resources.racetrack;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(603, 202);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.racetrackPictureBox.Image = global::RaceSim.Properties.Resources.racetrack;
+            this.racetrackPictureBox.Location = new System.Drawing.Point(12, 12);
+            this.racetrackPictureBox.Name = "racetrackPictureBox";
+            this.racetrackPictureBox.Size = new System.Drawing.Size(603, 202);
+            this.racetrackPictureBox.TabIndex = 0;
+            this.racetrackPictureBox.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -293,7 +298,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.racetrackPictureBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
@@ -303,7 +308,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.racetrackPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -315,7 +320,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox racetrackPictureBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label alBetLabel;
@@ -324,7 +329,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton alRadioButton;
         private System.Windows.Forms.RadioButton bobRadioButton;
-        private System.Windows.Forms.RadioButton joRadioButton;
+        private System.Windows.Forms.RadioButton joeRadioButton;
         private System.Windows.Forms.Label minimuBetLabel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
@@ -335,6 +340,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
