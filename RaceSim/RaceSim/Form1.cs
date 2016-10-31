@@ -15,6 +15,8 @@ namespace RaceSim
         public Form1()
         {
             InitializeComponent();
+            Greyhound[] GreyhoundArray = new Greyhound[4];
+            Guy[] GuyArray = new Guy[3];
         }
     }
 }
