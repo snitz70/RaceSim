@@ -44,7 +44,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.nameLabel);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.alBetLabel);
             this.groupBox1.Controls.Add(this.bobBetLabel);
@@ -103,6 +103,7 @@
             this.joeRadioButton.TabStop = true;
             this.joeRadioButton.Text = "radioButton1";
             this.joeRadioButton.UseVisualStyleBackColor = true;
+            this.joeRadioButton.CheckedChanged += new System.EventHandler(this.joeRadioButton_CheckedChanged);
             // 
             // bobRadioButton
             // 
@@ -114,6 +115,7 @@
             this.bobRadioButton.TabStop = true;
             this.bobRadioButton.Text = "radioButton2";
             this.bobRadioButton.UseVisualStyleBackColor = true;
+            this.bobRadioButton.CheckedChanged += new System.EventHandler(this.bobRadioButton_CheckedChanged);
             // 
             // alRadioButton
             // 
@@ -125,6 +127,7 @@
             this.alRadioButton.TabStop = true;
             this.alRadioButton.Text = "radioButton3";
             this.alRadioButton.UseVisualStyleBackColor = true;
+            this.alRadioButton.CheckedChanged += new System.EventHandler(this.alRadioButton_CheckedChanged);
             // 
             // label1
             // 
@@ -217,14 +220,14 @@
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
             // 
-            // label2
+            // nameLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 114);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(10, 114);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(35, 13);
+            this.nameLabel.TabIndex = 9;
+            this.nameLabel.Text = "label2";
             // 
             // button2
             // 
@@ -234,6 +237,7 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "bets";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // numericUpDown1
             // 
@@ -270,12 +274,12 @@
             // 
             this.numericUpDown2.Location = new System.Drawing.Point(273, 111);
             this.numericUpDown2.Maximum = new decimal(new int[] {
-            15,
+            4,
             0,
             0,
             0});
             this.numericUpDown2.Minimum = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});
@@ -283,7 +287,7 @@
             this.numericUpDown2.Size = new System.Drawing.Size(39, 20);
             this.numericUpDown2.TabIndex = 13;
             this.numericUpDown2.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
             0});
@@ -336,7 +340,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;

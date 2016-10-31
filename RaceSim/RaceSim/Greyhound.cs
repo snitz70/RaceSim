@@ -21,6 +21,7 @@ namespace RaceSim
             // Update the position of MyPictureBox on the form like this:
             //      MyPictureBox .Left = StartingPostions + Locaation;
             // Return true if I won the race
+            return false;
         }
 
         public void TakeStartingPostions()

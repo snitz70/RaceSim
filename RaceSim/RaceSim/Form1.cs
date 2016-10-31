@@ -78,6 +78,35 @@ namespace RaceSim
                 MyLabel = alBetLabel
             };
 
+            foreach (Guy guy in GuyArray)
+            {
+                guy.ClearBet();
+                guy.UpdateLabels();
+            }
+
+        }
+
+        private void joeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            nameLabel.Text = "Joe";
+        }
+
+        private void bobRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            nameLabel.Text = "Bob";
+        }
+
+        private void alRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            nameLabel.Text = "Al";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (joeRadioButton.Checked)
+            {
+                
+            }
         }
     }
 }

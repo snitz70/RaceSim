@@ -18,6 +18,14 @@ namespace RaceSim
             // cash was bet, and which dog he bet on ("Joe bets 8 on
             // dog #4").  If the amount is zero, not bet was placed
             // ("Joe hasn't placed a bet")
+            if (Amount == 0)
+            {
+                return Bettor.Name + " hasn't placed a bet";
+            }
+            else
+            {
+                return Bettor.Name + " bets " + Amount + " on dog #" + Dog;
+            }
         }
 
         public int PayOut(int Winner)
@@ -25,6 +33,7 @@ namespace RaceSim
             // The parameter is the winner of the race.  If the dog won,
             // return the amount of be.  Otherwise, return the negative of
             // the amount bet.
+            return 1;
         }
     }
 }
